@@ -1,0 +1,22 @@
+<meta charset="utf-8">
+<script>
+ var operation = prompt("Choose a math operation: 1.Addition; 2.Subtraction; 3.Multiplication; 4.Division; 5.Exponentiation.");
+// Отсекаем неверный ввод то
+  if (isNaN(operation) || (operation>5) || (operation<1)) {alert('Wrong input. Use 1, 2, 3, 4, 5,.');}
+ else {      
+//Вводим данные и переводим в числа
+  var a = parseInt(prompt("Input first number. a ="));
+  var b = parseInt(prompt("Input second number b="));
+  if (isNaN(a) || isNaN(b)) {alert('Wrong input a or b');}
+   else {
+  var result=0; var str='';
+//По выбору определяем действие
+   if (operation==1) { result=a+b; str='+';}
+   else if (operation==2) { result=a-b; str='-';}
+   else if (operation==3) { result=a*b; str='*';}
+   else if (operation==4) { result=a/b; str='/';}
+   else if (operation==5) { result=Math.pow(a,b); str='^';}
+ alert('Result: ' + a + ' ' + str + ' ' +  b + ' = ' + result);
+   }
+ }
+</script>
