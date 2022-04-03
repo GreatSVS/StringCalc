@@ -1,12 +1,12 @@
 <meta charset="utf-8">
 <script>
- var operation = prompt("Выберите математическую операцию:\n1. Сложение\n2. Вычитание\n3. Умножение\n4. Деление\n5. Возведение в степень");
+ var operation = prompt("Выберите математическую операцию:\n1. Сложение\n2. Вычитание\n3. Умножение\n4. Деление\n5. Возведение часла a в степень b\n6. Корень из числа a степени b");
 //Отсеиваем не верный выбор
-  if (isNaN(operation) || (operation>5) || (operation<1)) {alert('Не верный ввод!\nИcпользуйте 1, 2, 3, 4, 5.');}
+  if (isNaN(operation) || (operation>6) || (operation<1)) {alert('Не верный ввод!\nИcпользуйте 1, 2, 3, 4, 5, 6.');}
  else {      
 //Отбрасываем буквы вместо цифр
-  var a = parseInt(prompt("Введите первое число. a ="));
-  var b = parseInt(prompt("Введите второе число b="));
+  var a = parseInt(prompt("Введите первое число a ="));
+  var b = parseInt(prompt("Введите второе число b ="));
   if (isNaN(a) || isNaN(b)) {alert('Неверный ввод a или b');}
    else {
   var result=0; var str='';
@@ -16,6 +16,7 @@
    else if (operation==3) { result=a*b; str='*';}
    else if (operation==4) { result=a/b; str='/';}
    else if (operation==5) { result=Math.pow(a,b); str='^';}
+   else if (operation==6) { result=Math.pow(a,1/b); str='√';}
  alert('Ответ: ' + a + ' ' + str + ' ' +  b + ' = ' + result);
    }
  }
