@@ -1,13 +1,13 @@
 <meta charset="utf-8">
 <script>
- var operation = prompt("Choose a math operation: 1.Addition; 2.Subtraction; 3.Multiplication; 4.Division; 5.Exponentiation.");
+ var operation = prompt("Выберите математическую операцию: 1.Сложение; 2.Вычитание; 3.Умножение; 4.Деление; 5.Возведение в степень.");
 //Отсеиваем не верный выбор
-  if (isNaN(operation) || (operation>5) || (operation<1)) {alert('Wrong input. Use 1, 2, 3, 4, 5,.');}
+  if (isNaN(operation) || (operation>5) || (operation<1)) {alert('Не верный ввод. Импользуйте 1, 2, 3, 4, 5,.');}
  else {      
 //Отбрасываем буквы вместо цифр
-  var a = parseInt(prompt("Input first number. a ="));
-  var b = parseInt(prompt("Input second number b="));
-  if (isNaN(a) || isNaN(b)) {alert('Wrong input a or b');}
+  var a = parseInt(prompt("Введите первое число. a ="));
+  var b = parseInt(prompt("Введите второе число b="));
+  if (isNaN(a) || isNaN(b)) {alert('Неверный ввод a или b');}
    else {
   var result=0; var str='';
 //выполняем операции над числами
@@ -16,7 +16,7 @@
    else if (operation==3) { result=a*b; str='*';}
    else if (operation==4) { result=a/b; str='/';}
    else if (operation==5) { result=Math.pow(a,b); str='^';}
- alert('Result: ' + a + ' ' + str + ' ' +  b + ' = ' + result);
+ alert('Ответ: ' + a + ' ' + str + ' ' +  b + ' = ' + result);
    }
  }
 </script>
